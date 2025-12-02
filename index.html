@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <!-- animaiton for text -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <aside
+      id="sidebar"
+      class="sidebar bg-white position-fixed top-0 vh-100 text-center d-flex flex-column justify-content-between align-items-center py-3 z-3"
+    >
+      <div class="nav-logo mt-4">
+        <img
+          src="MovieAppImages/logoImg.png"
+          class="img-fluid w-50"
+          alt="website-logo"
+        />
+      </div>
+      <div class="nav-menu toggle-btn">
+        <i class="fa-solid fa-align-justify"></i>
+        <i class="fa-solid fa-xmark icon-close d-none"></i>
+      </div>
+      <div class="nav-contact d-flex flex-column gap-3 mb-3">
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+    </aside>
+
+    <div
+      id="big-menu"
+      class="big-menu position-fixed top-0 vh-100 d-flex flex-column justify-content-between py-4 z-2 text-white p-4"
+    >
+      <ul class="menu-items list-unstyled mt-3 overflow-hidden">
+        <li class="fw-light fs-6 py-3 animate__animated" id="nowPlaying">Now Playing</li>
+        <li class="fw-light fs-6 py-3 animate__animated" id="Popular">Popular</li>
+        <li class="fw-light fs-6 py-3 animate__animated" id="topRated">Top Rated</li>
+        <li class="fw-light fs-6 py-3 animate__animated" id="trending">Trending</li>
+        <li class="fw-light fs-6 py-3 animate__animated" id="upComing">Upcoming</li>
+        <a href="#contact" class="text-decoration-none text-white"
+          ><li class="fw-light fs-6 py-3 animate__animated">Contact Us</li></a
+        >
+      </ul>
+      <div class="footer">
+        <div class="social-icons d-flex gap-2 mb-3">
+          <a href="https://www.facebook.com" target="_blank" class="text-decoration-none text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-decoration-none text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#"  class="text-decoration-none text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </div>
+        <p class="text-white-50 fw-light">
+          Copyright © 2025 All Rights Reserved.
+        </p>
+        <p>
+          <a
+            class="text-decoration-none text-white-50"
+            href="https://github.com/mostafa-khaled77"
+            target="_blank"
+            >Created by <span class="text-danger">Mostafa Khaled</span></a
+          >
+        </p>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <search class="my-5 w-50 mx-auto">
+          <input
+          id="searchInput"
+            type="search"
+            oninput="search(this.value)"
+            placeholder="Search"
+            class="form-control rounded-pill bg-transparent text-white fs-6 fw-lighter px-3"
+          />
+        </search>
+        <div class="row g-4" id="movies-container">
+          <!-- .......  -->
+        </div>
+      </div>
+    </header>
+    <section id="contact">
+      <form class="my-5">
+        <div class="container">
+          <h2 class="text-white pb-4 fw-light">Contact US</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <input
+              id="nameInput"
+                type="text"
+                class="form-control border-0 border-bottom  bg-transparent rounded-0 text-center fw-light text-white"
+                placeholder="Enter Your Name"
+              />
+              <p class="text-danger text-center p-0 m-0 d-none">Invalid Name Only Charchter Allowed</p>
+            </div>
+            <div class="col-md-6">
+              <input
+              id="emailInput"
+              type="email"
+              class="form-control border-0 border-bottom bg-transparent rounded-0 text-center text-white fw-light"
+              placeholder="Enter Your Email"
+              />
+              <p class="text-danger text-center p-0 m-0 d-none">Invalid Email  Try , example@gmail.com</p>
+            </div>
+            <div class="col-md-6">
+              <input
+              id="phoneInput"
+              type="text"
+              class="form-control border-0 border-bottom bg-transparent rounded-0 text-center text-white fw-light"
+              placeholder="Enter Your Phone"
+              />
+              <p class="text-danger text-center p-0 m-0 d-none">Invalid Phone Number</p>
+            </div>
+            <div class="col-md-6">
+              <input
+              id="ageInput"
+              type="text"
+              class="form-control border-0 border-bottom bg-transparent rounded-0 text-center text-white fw-light"
+              placeholder="Enter Your Age"
+              />
+              <p class="text-danger text-center p-0 m-0 d-none">Your Age Must Be Over +16</p>
+            </div>
+            <div class="col-md-6 position-relative">
+              <input
+              type="password"
+              id="passwordInput"
+              class="form-control border-0 border-bottom bg-transparent rounded-0 text-center text-white fw-light"
+              placeholder="Enter Your Password"
+              />
+            <i id="togglePassword" class="fa-solid fa-eye-slash position-absolute text-white"></i>
+              <p class="text-danger text-center p-0 m-0 d-none">Must contain Numbers, letter and at least 8 Character</p>
+            </div>
+            <div class="col-md-6">
+              <input
+              id="rePasswordInput"
+              type="password"
+              class="form-control border-0 border-bottom bg-transparent rounded-0 text-center text-white fw-light"
+              placeholder="Re Enter Password"
+              />
+              <p class="text-danger text-center p-0 m-0 d-none">Password Not Match !</p>
+            </div>
+            <div class="col-12">
+              <button class="btn px-3">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script src="JavaScript/jquery-3.7.1.min.js"></script>
+    <script src="JavaScript/bootstrap.bundle.js"></script>
+    <script src="JavaScript/main.js"></script>
+  </body>
+</html>

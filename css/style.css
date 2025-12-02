@@ -1,0 +1,109 @@
+:root{
+  scroll-behavior: smooth;
+}
+::selection{
+  background: #fff;
+  color: #000;
+}
+body{
+  background-color: #0D0D0D;
+  font-family: 'Segoe UI';
+}
+
+/* Start Side Nav */
+.nav-menu i{
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 900;
+}
+.nav-contact i{
+  cursor: pointer;
+}
+.big-menu {
+    left: -280px;
+    width: 280px;
+    background: #000;
+    transition: all 0.4s ease-in-out;
+}
+.sidebar{
+    transition: all 0.4s ease-in-out;
+
+}
+.big-menu.open {
+   transform: translateX(280px);  
+   transition: all 0.5s ease-in-out;  
+}
+.sidebar.open {
+   transform: translateX(280px);  
+   transition: all 0.5s ease-in-out;  
+}
+.big-menu .menu-items li {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+.big-menu .menu-items li:hover {
+    color: #ff655c;
+}
+.social-icons a{
+  width: 30px;
+  height: 30px;
+}
+/* End Side Nav */
+
+
+
+/* Start Header Section  */
+.rating{
+  width: 40px;
+  height: 40px;
+  border: 2px solid #008000;
+}
+.inner img{
+  transition: all 0.4s ease-in-out;
+} 
+.inner:hover img{
+  transform: scale(1.2) rotate(5deg);
+  filter: blur(5px) brightness(50%)
+}
+.inner .layer{
+  opacity: 0;
+}
+.inner:hover .layer{
+  opacity: 1;
+}
+/* End Header Section  */
+
+
+/* Start Contact section  */
+input.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5); 
+  font-weight: lighter;
+}
+
+input.form-control{
+  border: 2px solid white;
+  padding: 6px 0px 6px 17px;
+
+}
+input.form-control:focus{
+  box-shadow: none;
+  border-color: white;
+}
+button.btn{
+  background-color: black;
+  color: white;
+}
+button.btn:hover{
+  background-color: white;
+  color: black;
+}
+#togglePassword{
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  cursor: pointer;
+}
+/* End Contact section  */
+
+
+
